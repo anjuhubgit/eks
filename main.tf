@@ -1,12 +1,17 @@
 module "vpc" {
-    source = "C:/Users/souls/OneDrive/Documents/terr_mod/modules/vpc"
+    source = "C:/Users/souls/OneDrive/Documents/eks/eks/modules/vpc"
+    #C:/Users/souls/OneDrive/Documents/eks/eks
+    #azs = var.vpc_availability_zones
+    availability_zone = var.vpc_availability_zones
+    cidr_block = var.cidr_block
+    #availability_zone = "ap-south-1a"
     
 }
 
 module "ecr" {
     source = "C:/Users/souls/OneDrive/Documents/terr_mod/modules/ecr"
-    mutable = "MUTABLE"
-    encryption_type = "AES256"
+    mutable = var.mutable
+    encryption_type = var.encryption_type
 
     
     

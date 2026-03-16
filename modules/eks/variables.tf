@@ -12,6 +12,6 @@ variable "subnet_ids" {
 variable "role" {
     description = "role"
     type = string
-    default = "value"
+    
   
 }
